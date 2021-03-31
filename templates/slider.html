@@ -1,0 +1,30 @@
+{% load static %}
+
+<section id="hero">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+
+      <div class="carousel-inner" role="listbox">
+
+
+        {% for row in sliderData %}
+        <!-- Slide 1 -->
+        <div class="carousel-item {% if forloop.first %} active {% endif %}" style="background-image: url({{row.image.url}});">
+          <div class="carousel-container">
+            <div class="carousel-content ">
+              <img src="{% static 'img/selfie.JPG' %}" ><br>
+              <h2>Hi! I'm Sam</h2>
+              <a href="https://www.facebook.com/profile.php?id=100009392679657" target="_blank" class="facebook"><i class="icofont-facebook"></i></a>
+              <a href="https://www.linkedin.com/in/samuelweller2000/" target="_blank" class="linkedin"><i class="icofont-linkedin"></i></i></a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      
+
+      </div>
+      
+
+    </div>
+  </section><!-- End Hero -->
+
+

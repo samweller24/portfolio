@@ -1,0 +1,35 @@
+{% extends 'layouts.html' %}
+
+{% block title %}
+Projects Page
+{% endblock %}
+
+{% block content %}
+======= Breadcrumbs ======= -->
+
+  <!-- ======= Projects Section ======= -->
+  <section id="Projects" class="services section-bg">
+    <div class="section-title">
+      <h2>Projects</strong></h2>
+    </div>
+
+
+    <div class="container" data-aos="fade-up" style ="margin-left: auto;
+    margin-right: auto;">
+      <div class="row"></div>
+    {% for row in project %}
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+          <div class="icon-box iconbox-blue">
+            <img src="{{row.image.url}}" class="img-fill" style="   width: 200px; height: 200px; object-fit: contain;" alt="">
+            <h4><a href="{{row.link}}" target="_blank">{{row.name}}</a></h4>
+            <p>{{row.descripton}}</p>
+          </div>
+    {% endfor %}
+  </div>
+
+       
+
+    </div>
+  </section><!-- End Services Section -->
+
+{% endblock %}

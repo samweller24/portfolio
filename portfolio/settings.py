@@ -25,7 +25,7 @@ SECRET_KEY = 't6(zk+hqivcn*3p8rs^xi6%9a3#okt^!-&gy!%^g)md3p!*rk@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['sam-weller.herokuapp.com']
 
 
 # Application definition
@@ -128,7 +128,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 
-#STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 
 MEDIA_URL='/media/'
 
